@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pytohtml — Portfólio</title>
+  <link rel="icon" href="https://www.python.org/static/favicon.ico" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/brython@3.14.0/brython.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/brython@3.14.0/brython_stdlib.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased min-h-screen" onload="brython()">
+<header class="bg-white shadow-sm py-4 px-6 flex items-center justify-between sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+<div class="flex flex-row gap-4 items-center justify-center w-full justify-between">
+<div class="flex flex-row gap-3 items-center justify-center">
+<img src="https://www.python.org/static/favicon.ico" alt="Logo PYTOHTML" class="max-w-full h-auto rounded-xl h-8 w-8 drop-shadow-sm" />
+<h2 class="text-3xl font-semibold text-gray-800 leading-snug text-xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-yellow-500">PYTOHTML</h2>
+</div>
+<nav class="flex gap-6 items-center">
+<button type="button" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-transparent text-slate-600 hover:text-blue-600 font-medium transition-colors duration-200">Início</button>
+<button type="button" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-transparent text-slate-600 hover:text-blue-600 font-medium transition-colors duration-200">Documentação</button>
+<button type="button" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-blue-600 hover:bg-blue-700 text-white bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 rounded-full px-6">Começar</button>
+</nav>
+</div>
+</header>
+<div class="relative pt-24 pb-32 px-4 text-center overflow-hidden bg-slate-950 text-white relative overflow-hidden">
+<h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">Design Simples. Resultados Poderosos.</h1>
+<p class="mt-4 text-xl md:text-2xl max-w-3xl mx-auto mb-10 opacity-80">Uma biblioteca em Python puro para criar interfaces modernas, sem tocar em HTML, CSS ou Javascript. Perfeito para quem está começando.</p>
+<div class="mt-8 flex justify-center gap-4">
+<button type="button" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-blue-600 hover:bg-blue-700 text-white bg-blue-600 hover:bg-blue-500 text-white shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 text-lg px-8 py-3 rounded-full border-none">Iniciar Jornada 🚀</button>
+<button type="button" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-transparent border-2 border-slate-600 text-slate-300 hover:text-white hover:bg-slate-800 transition-all duration-300 text-lg px-8 py-3 rounded-full">Ver Documentação</button>
+</div>
+</div>
+<section class="py-12 px-4 bg-gray-50">
+<div class="max-w-5xl mx-auto px-4 py-8">
+<h2 class="text-3xl font-semibold text-gray-800 leading-snug mb-6">1. Textos e Elementos Visuais</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-md bg-white shadow-sm hover:shadow-md transition-shadow">
+<h3 class="text-2xl font-semibold text-gray-800 text-lg text-gray-800 mb-2">Tipografia Inteligente</h3>
+<p class="text-base text-gray-600 leading-relaxed">Gerencie textos, negritos e cores de forma nativa e simples.</p>
+<p class="text-base text-gray-600 leading-relaxed text-sm text-gray-600">Este é um texto comum, mas </p>
+<p class="text-base text-gray-600 leading-relaxed text-sm font-bold text-indigo-600">este tem destaque</p>
+</div>
+<div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-md bg-white shadow-sm hover:shadow-md transition-shadow">
+<h3 class="text-2xl font-semibold text-gray-800 text-lg text-gray-800 mb-2">Avatares e Badges</h3>
+<div class="flex flex-row gap-2 items-center justify-center">
+<div class="inline-flex items-center justify-center relative rounded-full overflow-hidden bg-gray-200 border border-gray-300 w-12 h-12 shrink-0">
+<img src="https://picsum.photos/id/1025/100/100" alt="Avatar" class="object-cover w-full h-full" />
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-700">Premium</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-700">Ativo</span>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-md bg-white shadow-sm hover:shadow-md transition-shadow">
+<h3 class="text-2xl font-semibold text-gray-800 text-lg text-gray-800 mb-2">Botões Diferentes</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+<button type="button" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-blue-600 hover:bg-blue-700 text-white">Primário</button>
+<button type="button" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-gray-200 hover:bg-gray-300 text-gray-800">Secundário</button>
+<button type="button" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-red-600 hover:bg-red-700 text-white">Perigo</button>
+<button type="button" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-green-600 hover:bg-green-700 text-white">Sucesso</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-12 px-4">
+<div class="max-w-5xl mx-auto px-4 py-8">
+<h2 class="text-3xl font-semibold text-gray-800 leading-snug mb-6">2. Componentes Estruturais</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-md">
+<h4 class="text-xl font-medium text-gray-700 text-md text-gray-700">Alertas Estáticos</h4>
+<div class="flex flex-col gap-1">
+<div role="alert" class="border rounded-lg px-4 py-3 my-2 text-sm bg-green-50 border-green-200 text-green-800">Tudo funcionando perfeitamente!</div>
+<div role="alert" class="border rounded-lg px-4 py-3 my-2 text-sm bg-yellow-50 border-yellow-200 text-yellow-800">Seu disco está quase cheio.</div>
+<div role="alert" class="border rounded-lg px-4 py-3 my-2 text-sm bg-red-50 border-red-200 text-red-800">Houve um erro no servidor nativo.</div>
+<div role="alert" class="border rounded-lg px-4 py-3 my-2 text-sm bg-blue-50 border-blue-200 text-blue-800">Nova notificação!</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-md">
+<h4 class="text-xl font-medium text-gray-700 text-md text-gray-700 mb-3">Listas e Tabelas</h4>
+<ul class="list-disc list-inside space-y-1 text-gray-600 text-base"><li class="leading-relaxed">Primeiro item</li><li class="leading-relaxed">Segundo item</li><li class="leading-relaxed">Terceiro item</li></ul>
+<hr class="border-0 border-t border-gray-200 my-6 my-4" />
+<div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm"><table class="w-full border-collapse text-sm"><thead><tr><th scope="col" class="bg-gray-100 text-gray-700 font-semibold px-4 py-2 text-left border border-gray-200">ID</th><th scope="col" class="bg-gray-100 text-gray-700 font-semibold px-4 py-2 text-left border border-gray-200">Nome</th><th scope="col" class="bg-gray-100 text-gray-700 font-semibold px-4 py-2 text-left border border-gray-200">Status</th></tr></thead><tbody><tr><td class="bg-white px-4 py-2 border border-gray-200 text-gray-700">1</td><td class="bg-white px-4 py-2 border border-gray-200 text-gray-700">Sistema Core</td><td class="bg-white px-4 py-2 border border-gray-200 text-gray-700"><span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-700">Ativo</span></td></tr>
+<tr><td class="bg-gray-50 px-4 py-2 border border-gray-200 text-gray-700">2</td><td class="bg-gray-50 px-4 py-2 border border-gray-200 text-gray-700">Banco de Dados</td><td class="bg-gray-50 px-4 py-2 border border-gray-200 text-gray-700"><span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-700">Manutenção</span></td></tr>
+</tbody></table></div>
+</div>
+</div>
+<hr class="border-0 border-t border-gray-200 my-6 my-8" />
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-md">
+<h4 class="text-xl font-medium text-gray-700 mb-4">Accordion (Sanfona)</h4>
+<details class="group border border-gray-200 rounded-xl bg-white overflow-hidden my-4">
+
+    <summary class="cursor-pointer px-5 py-4 font-medium text-gray-800 bg-gray-50 hover:bg-gray-100 transition-colors select-none flex justify-between items-center outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+        O que é o componente accordion?
+        <span class="text-gray-400 group-open:rotate-180 transition-transform duration-200">▼</span>
+    </summary>
+    
+<div class="px-5 py-4 text-gray-600 bg-white border-t border-gray-200">
+<p class="text-base text-gray-600 leading-relaxed">É um painel que se expande ao clicar para mostrar seu conteúdo oculto.</p>
+</div>
+</details>
+<details class="group border border-gray-200 rounded-xl bg-white overflow-hidden my-4">
+
+    <summary class="cursor-pointer px-5 py-4 font-medium text-gray-800 bg-gray-50 hover:bg-gray-100 transition-colors select-none flex justify-between items-center outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+        Posso ter vários?
+        <span class="text-gray-400 group-open:rotate-180 transition-transform duration-200">▼</span>
+    </summary>
+    
+<div class="px-5 py-4 text-gray-600 bg-white border-t border-gray-200">
+<p class="text-base text-gray-600 leading-relaxed">Sim, você pode empilhar quantos quiser criando layouts eficientes.</p>
+</div>
+</details>
+</div>
+<div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-md">
+<h4 class="text-xl font-medium text-gray-700 mb-4">Código e Skeletons</h4>
+<code class="bg-gray-100 text-pink-600 rounded px-1.5 py-0.5 text-sm font-mono">print(&quot;Hello World!&quot;)</code>
+<hr class="border-0 border-t border-gray-200 my-6 my-4" />
+<p class="text-base text-gray-600 leading-relaxed font-semibold mb-2">Skeleton Loading:</p>
+<div class="space-y-2"><div class="animate-pulse bg-gray-200 rounded h-4 w-full h-8 w-3/4 mb-2"></div></div>
+<div class="space-y-2"><div class="animate-pulse bg-gray-200 rounded h-4 w-full h-4 w-full mb-2"></div></div>
+<div class="space-y-2"><div class="animate-pulse bg-gray-200 rounded h-4 w-full h-4 w-5/6"></div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-12 px-4 bg-indigo-50">
+<div class="max-w-5xl mx-auto px-4 py-8">
+<h2 class="text-3xl font-semibold text-gray-800 leading-snug text-2xl text-gray-800 mb-6 font-bold">3. Formulários</h2>
+<form action="#" method="post" class="space-y-4">
+<div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1">
+<label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+<input type="text" name="nome" id="nome" placeholder="João Silva" required class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+</div>
+<div class="flex flex-col gap-1">
+<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Profissional</label>
+<input type="email" name="email" id="email" placeholder="joao@empresa.com" required class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+</div>
+<div class="flex flex-col gap-1">
+<label for="senha" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
+<input type="password" name="senha" id="senha" placeholder="••••••••" required class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+</div>
+<div class="flex flex-col gap-1">
+<label for="data" class="block text-sm font-medium text-gray-700 mb-1">Data de Nascimento</label>
+<input type="date" name="data" id="data" required class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+</div>
+</div>
+<div class="flex flex-col gap-1 mt-4">
+<label for="bio" class="block text-sm font-medium text-gray-700 mb-1">Biografia</label>
+<textarea rows="3" name="bio" id="bio" placeholder="Fale um pouco sobre você..." class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y"></textarea>
+</div>
+<button type="submit" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-blue-600 hover:bg-blue-700 text-white mt-6 w-full">Enviar Formulário</button>
+</div>
+</form>
+<script type="text/python">
+
+from browser import document, ajax, window
+import json
+
+def _enviar_form(ev):
+    ev.preventDefault()
+    form = ev.target
+
+    # Prepara o botão para bloqueio
+    btn = form.querySelector('button[type="submit"]')
+    if btn:
+        texto_original = btn.text
+        btn.text = "Enviando..."
+        btn.disabled = True
+    else:
+        texto_original = ""
+
+    # Coleta todos os inputs do formulário
+    dados = {}
+    for inp in form.querySelectorAll("input, textarea, select"):
+        if inp.name:
+            dados[inp.name] = inp.value
+
+    # Callback quando API responder
+    def _pronto(req):
+        if btn:
+            btn.text = texto_original
+            btn.disabled = False
+
+        if req.status in [200, 201, 202, 204]:
+            window.eval('Swal.fire({icon: "success", title: "O cadastro simulado foi enviado com sucesso!", confirmButtonColor: "#16a34a"})')
+            form.reset()
+        else:
+            window.eval('Swal.fire({icon: "error", title: "Erro " + str(req.status), text: "Falha ao enviar os dados.", confirmButtonColor: "#3085d6"})')
+
+    # Envio AJAX
+    req = ajax.ajax()
+    req.open("POST", "https://jsonplaceholder.typicode.com/posts", True)
+    req.bind("complete", _pronto)
+    req.set_header("Content-Type", "application/json")
+    req.send(json.dumps(dados))
+
+# Vincula todos os formulários que batem com o seletor
+for f in document.select("form"):
+    f.bind("submit", _enviar_form)
+
+</script>
+</div>
+</section>
+<section class="py-12 px-4">
+<div class="max-w-5xl mx-auto px-4 py-8">
+<h2 class="text-3xl font-semibold text-gray-800 leading-snug mb-6">4. Popups e Interatividade Nativa</h2>
+<p class="text-base text-gray-600 leading-relaxed mb-6 text-gray-600">Usando as funções de alerta intuitivo e o motor Python integrado, tudo roda perfeitamente no cliente.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-md bg-white shadow-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700">Popups</span>
+<h4 class="text-xl font-medium text-gray-700 text-lg text-gray-800 mt-2 mb-4">Alertas Centrais</h4>
+<div class="flex flex-col gap-2 items-center justify-center">
+<button type="button" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-green-600 hover:bg-green-700 text-white id-btn-suc w-full">Sucesso</button>
+<button type="button" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-red-600 hover:bg-red-700 text-white id-btn-err w-full">Erro</button>
+<button type="button" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-blue-600 hover:bg-blue-700 text-white id-btn-avi w-full">Aviso</button>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-md bg-white shadow-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-700">Ações</span>
+<h4 class="text-xl font-medium text-gray-700 text-lg text-gray-800 mt-2 mb-4">Toast &amp; Confirmação</h4>
+<div class="flex flex-col gap-4 items-center justify-center">
+<button type="button" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-green-600 hover:bg-green-700 text-white id-btn-toast w-full">Mostrar Toast 🎉</button>
+<button type="button" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-red-600 hover:bg-red-700 text-white id-btn-del w-full">Deletar Conta 🗑️</button>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-md bg-white shadow-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-700">Motor Web</span>
+<h4 class="text-xl font-medium text-gray-700 text-lg text-gray-800 mt-2 mb-4">Python Assíncrono</h4>
+<p class="text-base text-gray-600 leading-relaxed text-sm text-gray-600 mb-4">Busca de API externa feita 100% no cliente com o Python:</p>
+<button type="button" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-gray-200 hover:bg-gray-300 text-gray-800 id-btn-fetch w-full mb-4">🌍 Buscar Dados Fakes</button>
+<div id="api-result"></div>
+</div>
+</div>
+<script>
+document.querySelector(".id-btn-suc").addEventListener("click", function() {
+    Swal.fire({icon: "success", title: "Maravilha!", text: ""});
+});
+</script>
+<script>
+document.querySelector(".id-btn-err").addEventListener("click", function() {
+    Swal.fire({icon: "error", title: "Oops!", text: ""});
+});
+</script>
+<script>
+document.querySelector(".id-btn-avi").addEventListener("click", function() {
+    Swal.fire({icon: "warning", title: "Atenção!", text: ""});
+});
+</script>
+<script>
+document.querySelector(".id-btn-toast").addEventListener("click", function() {
+    Swal.fire({icon: "success", title: "Toast Ativado!", text: "Operação rápida."});
+});
+</script>
+<script>
+document.querySelector(".id-btn-del").addEventListener("click", function() {
+    Swal.fire({
+        icon: "warning",
+        title: "Apagar tudo?",
+        text: "Toda a base será perdida.",
+        showCancelButton: true,
+        confirmButtonText: "Sim",
+        cancelButtonText: "Cancelar",
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+    }).then(function(result) {
+        if (result.isConfirmed) {
+            
+            Swal.fire({icon: "success", title: "Confirmado!", timer: 1500, showConfirmButton: false});
+        }
+    });
+});
+</script>
+<script type="text/python">
+
+from browser import ajax
+
+def _on_response(req):
+    from browser import document
+    import json
+    if req.status == 200:
+        dados = json.loads(req.text)
+        if isinstance(dados, list):
+            html_items = "".join(f'<div class="p-3 border-b border-gray-200">{item}</div>' for item in dados)
+            document.select("#api-result")[0].html = html_items
+        elif isinstance(dados, dict):
+            html_items = "".join(
+                f'<div class="flex gap-2 py-1"><span class="font-semibold text-gray-700">{str(k).capitalize()}:</span><span class="text-gray-600 truncate">{v}</span></div>'
+                for k, v in dados.items()
+            )
+            document.select("#api-result")[0].html = html_items
+        else:
+            document.select("#api-result")[0].html = str(dados)
+    else:
+        from browser import window
+        window.eval(f'Swal.fire({{icon: "error", title: "Erro na requisição", text: "Status {req.status} ao acessar a API.", confirmButtonColor: "#3085d6"}})')
+        document.select("#api-result")[0].html = f'<span class="text-red-500">Erro {req.status}</span>'
+
+
+def _disparar_busca(ev):
+    ev.preventDefault()
+    document.select("#api-result")[0].html = '<div class="animate-pulse bg-gray-200 h-8 w-full rounded"></div>'
+    ajax.get("https://dummyjson.com/users/1", oncomplete=_on_response)
+
+from browser import document
+els = document.select(".id-btn-fetch")
+for el in els:
+    el.bind("click", _disparar_busca)
+
+
+</script>
+</div>
+</section>
+<section class="py-12 px-4 bg-white">
+<div class="max-w-5xl mx-auto px-4 py-8">
+<h2 class="text-3xl font-semibold text-gray-800 leading-snug mb-6">5. Modais HTML Puro (Tailwind)</h2>
+<div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-md">
+<p class="text-base text-gray-600 leading-relaxed mb-4">Além dos alertas interativos, o pytohtml suporta modais tradicionais de HTML escondidos pelo Tailwind.</p>
+<button type="button" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-blue-600 hover:bg-blue-700 text-white id-btn-abrir-modal">Abrir Modal Padrão</button>
+<dialog id="meu-modal-demo" class="backdrop:bg-gray-800/60 backdrop:backdrop-blur-sm p-6 rounded-2xl shadow-2xl max-w-lg w-full border border-gray-100 outline-none m-auto">
+
+    <div class="flex justify-between items-center mb-4">
+        <h3 class="text-xl font-bold text-gray-900">Termos de Uso</h3>
+        <button type="button" onclick="document.getElementById('meu-modal-demo').close()" class="text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded p-1">
+            ✕
+        </button>
+    </div>
+    
+<div class="text-gray-600">
+Este é um exemplo de modal nativo usando Tailwind estruturando os elementos.
+<button type="button" class="px-5 py-2.5 rounded-lg font-medium text-sm transition-colors cursor-pointer bg-green-600 hover:bg-green-700 text-white w-full mt-4">Aceitar e Fechar</button>
+</div>
+</dialog>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const botoes = document.querySelectorAll(".id-btn-abrir-modal");
+    const modal = document.getElementById("meu-modal-demo");
+    if (modal) {
+        botoes.forEach(btn => btn.addEventListener("click", () => modal.showModal()));
+    }
+});
+</script>
+</div>
+</div>
+</section>
+<footer class="bg-gray-800 text-gray-300 text-sm py-6 px-6 text-center mt-auto">
+<div class="flex flex-col gap-2 items-center justify-center">
+<p class="text-base text-gray-600 leading-relaxed text-gray-400">© 2024 pytohtml</p>
+<div class="flex flex-row gap-4 items-center justify-center">
+<a href="#" class="text-blue-600 hover:text-blue-800 underline underline-offset-2 transition-colors text-gray-400 hover:text-white mx-2">GitHub</a>
+<a href="#" class="text-blue-600 hover:text-blue-800 underline underline-offset-2 transition-colors text-gray-400 hover:text-white mx-2">Twitter</a>
+</div>
+</div>
+</footer>
+</body>
+</html>
