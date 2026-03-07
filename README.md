@@ -8,9 +8,17 @@
 
 ## O que é
 
-**pytohtml** transforma código Python em HTML completo, estilizado com Tailwind CSS e pronto para abrir no navegador. Você escreve funções Python, ela gera o arquivo `.html`.
+**pytohtml** é uma biblioteca Python que permite construir interfaces web completas usando apenas código Python. Cada elemento da página — títulos, botões, formulários, tabelas, modais, grids — é uma função Python que retorna HTML semântico estilizado com Tailwind CSS.
 
-Sem templates. Sem frameworks front-end. Sem npm.
+O fluxo é simples: você escreve Python, a biblioteca gera um arquivo `.html` pronto para abrir no navegador, compartilhar ou hospedar em qualquer servidor estático.
+
+**Por que usar?**
+
+- **Zero dependências Python** — nada para instalar via pip. Tailwind CSS, SweetAlert2 e Brython carregam via CDN.
+- **Sem templates** — você não escreve strings de HTML. A estrutura é definida pela composição de funções.
+- **Interatividade opcional** — alertas e confirmações funcionam via SweetAlert2 sem JavaScript manual. Para lógica mais complexa, Brython permite executar Python diretamente no browser.
+- **Componentes prontos** — grids responsivos, skeleton loading, accordion, modais nativos e tabelas estilizadas já estão incluídos.
+- **Ideal para quem está aprendendo** — uma forma de criar resultados visuais reais sem sair do ecossistema Python.
 
 ---
 
@@ -29,7 +37,15 @@ meu-projeto/
 └── meu_script.py
 ```
 
-**Requisitos:** Python 3.10+ · Conexão com internet (Tailwind via CDN)
+Ou clone o repositório e execute seus scripts a partir da raiz:
+
+```bash
+git clone https://github.com/GabrielUzeda/pytohtml.git
+cd pytohtml
+python meu_script.py
+```
+
+**Requisitos:** Python 3.10+ · Conexão com internet (Tailwind e SweetAlert2 via CDN)
 
 ---
 
@@ -39,9 +55,19 @@ meu-projeto/
 from pytohtml import *
 
 pagina = html(
-    titulo("Olá, Mundo!", tamanho="gigante"),
-    paragrafo("Bem-vindo ao pytohtml."),
-    botao("Começar", variante="primario"),
+    cabecalho(nav(
+        titulo("Meu Site", tamanho="medio"),
+        botao("Contato", variante="primario"),
+        classes="w-full justify-between"
+    )),
+    secao(container(
+        titulo("Bem-vindo ao pytohtml", tamanho="gigante"),
+        paragrafo("HTML gerado com Python puro, estilizado com Tailwind CSS."),
+        linha(
+            botao("Começar agora", variante="primario"),
+            botao("Ver docs", variante="secundario"),
+        )
+    )),
     titulo_pagina="Meu Site"
 )
 
@@ -61,7 +87,7 @@ python meu_script.py
 
 ![Elementos Básicos](screenshots/elementos-basicos.png)
 
-Títulos, parágrafos, links, listas, botões com variantes de cor, avatares, badges e muito mais — tudo com uma linha de Python.
+Títulos semânticos (`<h1>`–`<h4>`), parágrafos, links, listas, botões com variantes de cor (primário, secundário, perigo, sucesso), avatares com foto ou iniciais, badges coloridas, imagens responsivas e blocos de código — tudo com uma chamada de função.
 
 ---
 
@@ -69,7 +95,7 @@ Títulos, parágrafos, links, listas, botões com variantes de cor, avatares, ba
 
 ![Componentes](screenshots/componentes.png)
 
-Alertas estáticos, tabelas, cards, accordion, skeleton loading, código com destaque — componentes prontos para uso imediato.
+Alertas estáticos com quatro níveis de severidade, tabelas geradas a partir de listas Python, cards de conteúdo, accordion nativo sem JavaScript, código com destaque de sintaxe e skeleton loading para estados de carregamento.
 
 ---
 
@@ -77,7 +103,7 @@ Alertas estáticos, tabelas, cards, accordion, skeleton loading, código com des
 
 ![Formulários](screenshots/formularios.png)
 
-Campos, labels, textarea e o wrapper `formulario()` organizam tudo com espaçamento automático e estilos consistentes.
+Labels semânticos, inputs estilizados, campos de senha e data, textarea com redimensionamento vertical e o wrapper `formulario()` que organiza tudo com espaçamento automático entre campos.
 
 ---
 
@@ -85,7 +111,7 @@ Campos, labels, textarea e o wrapper `formulario()` organizam tudo com espaçame
 
 ![Interatividade](screenshots/interatividade.png)
 
-Popups e confirmações via SweetAlert2 sem escrever JavaScript. Para interações mais complexas, use Brython — Python rodando diretamente no navegador.
+Popups elegantes via SweetAlert2 sem JavaScript manual: alertas de sucesso/erro/aviso, toasts não intrusivos e diálogos de confirmação. Para lógica mais avançada, Brython permite escrever handlers de eventos, estado reativo e chamadas a APIs externas — tudo em Python.
 
 ---
 
@@ -143,4 +169,4 @@ A documentação completa com exemplos de cada função está disponível na **[
 
 ## Licença
 
-[MIT](LICENSE)
+[GPL-3.0](LICENSE)
