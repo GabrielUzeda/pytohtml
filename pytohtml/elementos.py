@@ -475,6 +475,7 @@ def accordion(titulo_aba: str, *conteudo: str, classes: str | None = None) -> st
     </summary>
     """
     
-    corpo = f'<div class="px-5 py-4 text-gray-600 bg-white border-t border-gray-200">\n{"\n".join(str(c) for c in conteudo)}\n</div>'
+    conteudo_html = "\\n".join(str(c) for c in conteudo)
+    corpo = f'<div class="px-5 py-4 text-gray-600 bg-white border-t border-gray-200">\\n{conteudo_html}\\n</div>'
     
     return f'<details class="{_cls(base, classes)}">\n{summary}\n{corpo}\n</details>'
